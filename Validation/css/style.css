@@ -1,0 +1,19 @@
+body {
+	width: 500px;
+	margin: auto;
+}
+
+div {
+	margin: auto;
+	border: 1px solid black;
+	border-radius: 15px;
+}
+
+#validate {
+	margin-left: 175px;
+}
+
+p {
+	margin: auto;
+	width: 125px;
+}
