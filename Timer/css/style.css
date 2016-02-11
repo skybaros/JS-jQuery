@@ -1,0 +1,27 @@
+div {
+	margin: auto;
+	width: 900px;
+}
+
+
+* {
+	font-size: 1.45em;
+	font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+}
+
+p {
+	margin: auto;
+	width: 500px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 1em;
+}
+
+.text {
+	font-size: 15px;
+}
+
+body {
+	border: 1px solid black;
+	border-radius: 15px;
+	box-shadow: 10px 10px 5px #888888;
+}
