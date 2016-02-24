@@ -1,4 +1,9 @@
-(function($) {
+(function() {
+  $('.day').text('');
+      $('.hour').text('');
+      $('.min').text('');
+      $('.sec').text('');
+    
   $.fn.timer = function(options) {
     var time = {
       'date': null
@@ -6,13 +11,17 @@
     if (options) {
       $.extend(time, options);
     }
-    interval = setInterval(countDownTime, 1000);
+
+
+    $("#start").click(countDownTime);
     function countDownTime() {
+      interval = setInterval(countDownTime, 1000);
       newYearDate = Date.parse(time.date) / 1000;
       currentDate = Math.floor($.now() / 1000);
       if (newYearDate <= currentDate) {
         clearInterval(interval);
       }
+
       seconds = newYearDate - currentDate;
       days = Math.floor(seconds / (60 * 60 * 24));
       seconds -= days * 60 * 60 * 24;
@@ -30,8 +39,20 @@
         $('.hour').text(hours);
         $('.min').text(minutes);
         $('.sec').text(seconds);
-       }
+      }
+      
     }
-    countDownTime();
+
+    $("#reset").click(resetTimer);
+    function resetTimer() {
+      // var localInterval = setInterval(countDownTime); 
+      // clearInterval(localInterval);
+      // countDownTime.queue();
+      //clearInterval(interval);
+      $('.day').text('--');
+      $('.hour').text('--');
+      $('.min').text('--');
+      $('.sec').text('--');
+    }
   };
 })(jQuery);
